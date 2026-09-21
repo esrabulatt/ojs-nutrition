@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+.blaze-slider {
+  --slides-to-show: 6;
+  --slide-gap: 16px;
+}
+
+.blaze-track > * {
+  width: calc((100% - (var(--slides-to-show) - 1) * var(--slide-gap)) / var(--slides-to-show)) !important;
+  flex-shrink: 0;
+}
+
+.logo-font {
+  font-family: 'Orbitron', 'Arial Black', sans-serif;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
