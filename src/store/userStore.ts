@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { useCartStore } from './cartStore';
 
 const STORAGE_KEY = 'ojs-user-v1';
 
@@ -42,6 +43,13 @@ export const useUserStore = create<UserState>((set) => ({
   },
   logout: () => {
     save(null);
+    // Çıkış yapınca sepet ve ödemedeki adres/kargo seçimi de sıfırlanır (yeni kullanıcı boş başlar)
+    useCartStore.getState().clearCart();
+    try {
+      localStorage.removeItem('ojs-checkout-v1');
+    } catch {
+      /* localStorage kullanılamıyorsa sessizce geç */
+    }
     set({ user: null });
   },
 }));
