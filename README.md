@@ -4,7 +4,7 @@ Spor takviyesi satan bir e-ticaret sitesinin React ile geliştirilmiş ön yüz�
 
 > Bu bir ders projesidir. Ödeme, giriş ve veriler simüle edilmiştir; sunucu (backend) yoktur. Ayrıntılar için aşağıdaki [Sınırlılıklar](#sınırlılıklar) bölümüne bakın.
 
-**Canlı demo:** _(yayınlandıktan sonra eklenecek)_
+**Canlı demo:** [ojs-nutrition-canli.vercel.app](https://ojs-nutrition-canli.vercel.app/)
 
 ## Özellikler
 
